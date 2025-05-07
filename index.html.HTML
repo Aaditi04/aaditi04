@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aaditi Kadam's Portfolio - Mechatronics Engineering Student specializing in robotics and control systems.">
+    <title>Aaditi Kadam - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f125aba52b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.png" class="logo" alt="Aaditi Kadam Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#learnabout">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Mechatronics Engineering Student</p>
+                <h1><span id="typed-text"></span></h1>
+                <p>Building innovative solutions in robotics and control systems</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.jpg" alt="Aaditi Kadam">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Aaditi Kadam, a Mechatronics Engineering student at Mumbai University, passionate about robotics, control systems, and innovative design. Skilled in Fusion 360, ROS, PyQt5, Python, C, and C++, I thrive on solving complex problems and collaborating on impactful projects. My goal is to contribute to cutting-edge engineering solutions through creativity and technical expertise.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Languages')">Languages</p>
+                        <p class="tab-links" onclick="opentab('Interests')">Interests</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Languages">
+                        <ul>
+                            <li><span>Python</span></li>
+                            <li><span>C</span></li>
+                            <li><span>C++</span></li>
+                            <li><span>HTML & CSS</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Interests">
+                        <ul>
+                            <li><span>Robotics Design</span></li>
+                            <li><span>Control Systems</span></li>
+                            <li><span>Embedded Systems</span></li>
+                            <li><span>GUI Development</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="learnabout">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="learnabout-list">
+                <div class="skill-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Programming</h2>
+                    <p>Proficient in Python, C, C++ for robotics, GUI development, and algorithm design.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Tools & Technologies</h2>
+                    <p>Experienced with Fusion 360, ROS, PyQt5, MATLAB, HTML, and CSS for engineering and design.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h2>Soft Skills</h2>
+                    <p>Strong communication, problem-solving, teamwork, and collaboration skills.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project" onclick="openModal('project1')">
+                    <img src="Images/rhex-robot.png" alt="RHex Robot">
+                    <div class="layer">
+                        <h3>RHex-Inspired Search and Rescue Robot</h3>
+                        <p>Developed a multi-legged robot for CSSR operations with thermal, ultrasonic, IMU, GPS, and camera sensors.</p>
+                        <i class="fa-solid fa-eye view-icon"></i>
+                    </div>
+                </div>
+                <div class="project" onclick="openModal('project2')">
+                    <img src="Images/braking-system.png" alt="Automatic Braking System">
+                    <div class="layer">
+                        <h3>Automatic Braking System</h3>
+                        <p>Designed a prototype for vehicle safety, using distance sensors and real-time motor control.</p>
+                        <i class="fa-solid fa-eye view-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <div id="project1" class="project-details">
+                <h3>RHex-Inspired Search and Rescue Robot</h3>
+                <p>Developed a multi-legged robot for CSSR operations with thermal, ultrasonic, IMU, GPS, and camera sensors. Built a PyQt5 GUI on Ubuntu, integrating Raspberry Pi and Arduino for real-time control. The robot was designed to navigate challenging terrains and assist in disaster response scenarios.</p>
+            </div>
+            <div id="project2" class="project-details">
+                <h3>Automatic Braking System</h3>
+                <p>Designed a prototype for vehicle safety, using distance sensors and real-time motor control to activate brakes upon obstacle detection. The system was tested in simulated environments to ensure reliability and responsiveness, enhancing road safety.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:aadidkadam415@gmail.com">aadidkadam415@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i>8355953294</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/aadk415/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/aaditi-kadam" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <h2>Let's Connect!</h2>
+                    <p>I'm excited to discuss internship opportunities and collaborative projects. Feel free to reach out via email or phone!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // Tab functionality
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Menu functionality
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+        // Typing animation for header
+        var typed = new Typed("#typed-text", {
+            strings: ["Hi, I'm Aaditi Kadam"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: false,
+            showCursor: true,
+            cursorChar: "|"
+        });
+
+        // Scroll-to-top button
+        var scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Modal functionality for projects
+        var modal = document.getElementById("projectModal");
+        var projectDetails = document.getElementsByClassName("project-details");
+        function openModal(projectId) {
+            modal.style.display = "block";
+            for (var i = 0; i < projectDetails.length; i++) {
+                projectDetails[i].style.display = "none";
+            }
+            document.getElementById(projectId).style.display = "block";
+        }
+        function closeModal() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
